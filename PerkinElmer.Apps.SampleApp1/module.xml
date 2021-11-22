@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <id>a9803d6d-2d87-4669-af43-1ae3d9cddfb5</id>
+  <name>PerkinElmer.Apps.SampleApp1</name>
+  <version>1.0.0.0</version>
+  <intendedClient>Any</intendedClient>
+  <assemblies>
+    <assembly>
+      <fullname>PerkinElmer.Apps.SampleApp1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d95002c27fab778</fullname>
+      <codebase>PerkinElmer.Apps.SampleApp1.dll</codebase>
+      <compatibility>
+        <min-version>0.0.0.0</min-version>
+        <max-version>#.#.*.*</max-version>
+      </compatibility>
+    </assembly>
+  </assemblies>
+  <extensions>
+    <addIn fullTypeName="PerkinElmer.Apps.SampleApp1.AddIn, PerkinElmer.Apps.SampleApp1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d95002c27fab778" />
+  </extensions>
+</module>

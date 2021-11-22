@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ScriptFunctionDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Version Major="1" Minor="0" />
+  <Name>DistanceTo</Name>
+  <Script>import scipy.spatial
+import pandas
+
+
+distances = scipy.spatial.distance.cdist(list(zip(airbnbLatitude, airbnbLongitude)), list(zip(subwayEntryLatitude, subwayEntryLongitude)), metric='euclidean')
+
+distanceToSubway = [ min(y * 1000 for y in x) for x in distances ]
+</Script>
+  <Language>Python</Language>
+  <Input>
+    <Name>airbnbLatitude</Name>
+    <Type>Column</Type>
+    <DisplayName>airbnbLatitude</DisplayName>
+    <Description />
+    <AllowedDataType>Integer</AllowedDataType>
+    <AllowedDataType>Double</AllowedDataType>
+  </Input>
+  <Input>
+    <Name>airbnbLongitude</Name>
+    <Type>Column</Type>
+    <DisplayName>airbnbLongitude</DisplayName>
+    <Description />
+    <AllowedDataType>Integer</AllowedDataType>
+    <AllowedDataType>Double</AllowedDataType>
+  </Input>
+  <Input>
+    <Name>subwayEntryLatitude</Name>
+    <Type>Column</Type>
+    <DisplayName>subwayEntryLatitude</DisplayName>
+    <Description />
+    <AllowedDataType>Integer</AllowedDataType>
+    <AllowedDataType>Double</AllowedDataType>
+  </Input>
+  <Input>
+    <Name>subwayEntryLongitude</Name>
+    <Type>Column</Type>
+    <DisplayName>subwayEntryLongitude</DisplayName>
+    <Description />
+    <AllowedDataType>Integer</AllowedDataType>
+    <AllowedDataType>Double</AllowedDataType>
+  </Input>
+  <Output>
+    <Name>distanceToSubway</Name>
+    <Type>Column</Type>
+    <DisplayName>distanceToSubway</DisplayName>
+    <Description />
+  </Output>
+  <Description />
+  <ApprovalStamp>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAh+7FgCwYUEie2bbPhEQWggAAAAACAAAAAAADZgAAwAAAABAAAACnzeBtNi9CinJHkr73r7nAAAAAAASAAACgAAAAEAAAAE7ThAwBP4ALyvHYg36S5quIAAAA0ay7bB1FOcCG8FIk89a1KYtLdcxZMVoyrxDX9UiYg5AvSIaBNLTlbxnpY/GKTweJdPNibtGOa3NV+EV//d7Wxo2G1tKmJ7VjYSvL+yoD5h7vL3qhdOpoA4I213pSwB0zZJvsv3NPfzUhj4jBu9ZouFy+QeBb4zeu5qFRv5USqdnjPr3iW2Y4+BQAAADtlSJk/VDDEgBqs+quHzsuYE1VSQ==</ApprovalStamp>
+  <AdditionalApprovalStamps />
+</ScriptFunctionDefinition>

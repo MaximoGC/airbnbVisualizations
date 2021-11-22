@@ -1,0 +1,425 @@
+{
+  "components": [
+    {
+      "component": "ThreeTabsLayout",
+      "scope": "menu"
+    }
+  ],
+  "views": [
+    {
+      "view": "home",
+      "components": [
+        {
+          "component": "Steps",
+          "scope": "stepByStep",
+          "params": {
+            "willGoNext": "nextStep"
+          },
+          "values": [
+            {
+              "scope": "stepByStep.activeView",
+              "value": "airbnbData"
+            },
+            {
+              "scope": "stepByStep.views",
+              "value": [
+                {
+                  "view": "airbnbData",
+                  "title": "Airbnb Data"
+                },
+                {
+                  "view": "subwayData",
+                  "title": "Subway Data"
+                },
+                {
+                  "view": "subwayDataFunction",
+                  "title": "Calculate distance"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "view": "airbnbData",
+      "components": [
+        {
+          "component": "TableSelector",
+          "scope": "airbnb",
+          "params": {
+            "validation": {
+              "onEvents": [ "airbnb.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "airbnbLatitude",
+          "params": {
+            "validation": {
+              "onEvents": [ "airbnbLatitude.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "airbnbLongitude",
+          "params": {
+            "validation": {
+              "onEvents": [ "airbnbLongitude.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "airbnbNeighbourhoodGroup",
+          "params": {
+            "validation": {
+              "onEvents": [ "airbnbNeighbourhoodGroup.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "airbnbNeighbourhood",
+          "params": {
+            "validation": {
+              "onEvents": [ "airbnbNeighbourhood.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "airbnbRoomType",
+          "params": {
+            "validation": {
+              "onEvents": [ "airbnbRoomType.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "view": "subwayData",
+      "components": [
+        {
+          "component": "TableSelector",
+          "scope": "subwayEntries",
+          "params": {
+            "validation": {
+              "onEvents": [ "subwayEntries.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "subwayEntryLatitude",
+          "params": {
+            "validation": {
+              "onEvents": [ "subwayEntryLatitude.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "subwayEntryLongitude",
+          "params": {
+            "validation": {
+              "onEvents": [ "subwayEntryLongitude.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "component": "ColumnSelector",
+          "scope": "subwayEntryLine",
+          "params": {
+            "validation": {
+              "onEvents": [ "subwayEntryLine.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        },
+      ]
+    },
+    {
+      "view": "subwayDataFunction",
+      "components": [
+        {
+          "component": "Button",
+          "scope": "executeDf",
+          "value": "Run",
+          "params": {
+            "action": "DistanceTo"
+          }
+        }
+      ]
+    },
+    {
+      "view": "visualization",
+      "components": [
+        {
+          "component": "View",
+          "scope": "visualizationLayout"
+        }
+      ]
+    },
+    {
+      "view": "default",
+      "components": [
+        {
+          "component": "ColumnSelector",
+          "scope": "airbnbMain",
+          "params": {
+            "validation": {
+              "onEvents": [ "airbnbMain.onBlur" ],
+              "validations": [
+                {
+                  "type": "error",
+                  "description": "Required",
+                  "validator": "validator.required"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "view": "mapDistanceLayout",
+      "components": [
+        {
+          "component": "Slider",
+          "scope": "maxDistance",
+          "values": [
+            {
+              "scope": "maxDistance.value",
+              "value": 5
+            },
+            {
+              "scope": "maxDistance.attributes",
+              "value": {
+                "title": "Max distance",
+                "min": 0,
+                "max": 20,
+                "step": 0.1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "visualizationLayouts": [
+    {
+      "visualizationLayout": "subwayDataSelector",
+      "layout": {
+        "grid": "column",
+        "size": 100,
+        "children": [
+          {
+            "size": 100,
+            "visualization": "mapSubway",
+            "refresh": {
+              "action": "refreshMapSubway",
+              "parametersId": [ "subwayEntries" ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "visualizationLayout": "mapDistanceLayout",
+      "layout": {
+        "grid": "column",
+        "size": 100,
+        "children": [
+          {
+            "size": 100,
+            "marking": "airbnbMarking",
+            "markings": [ "airbnbMarking" ],
+            "visualization": "mapDistance"
+          }
+        ]
+      }
+    },
+    {
+      "visualizationLayout": "default",
+      "layout": {
+        "grid": "row",
+        "size": 100,
+        "children": [
+          {
+            "size": 40,
+            "layout": {
+              "grid": "column",
+              "children": [
+                {
+                  "size": 50,
+                  "marking": "airbnbMarking",
+                  "markings": [ "airbnbMarking" ],
+                  "visualization": "neihbourhoodGroup",
+                  "refresh": {
+                    "action": "refreshBarChartAirbnbTable",
+                    "parametersId": [ "airbnb" ]
+                  }
+                },
+                {
+                  "size": 50,
+                  "marking": "airbnbMarking",
+                  "markings": [ "airbnbMarking" ],
+                  "visualization": "neihbourhood",
+                  "refresh": {
+                    "action": "refreshBarChartAirbnbTable",
+                    "parametersId": [ "airbnb" ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "size": 60,
+            "layout": {
+              "grid": "column",
+              "children": [
+                {
+                  "size": 60,
+                  "marking": "airbnbMarking",
+                  "markings": [ "airbnbMarking" ],
+                  "visualization": "map",
+                  "refresh": {
+                    "action": "refreshMapChartAirbnbTable",
+                    "parametersId": [ "airbnb", "airbnbMain" ]
+                  }
+                },
+                {
+                  "size": 40,
+                  "marking": "airbnbMarking",
+                  "markings": [ "airbnbMarking" ],
+                  "visualization": "roomType",
+                  "refresh": {
+                    "action": "refreshBarChartAirbnbTable",
+                    "parametersId": [ "airbnb" ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "name": "DistanceTo",
+      "type": "DataFunction",
+      "visualizationLayout": "mapDistanceLayout",
+      "settings": {
+        "runtime": "python",
+        "path": "DistanceTo.sfd",
+        "inputs": [
+          {
+            "parameterId": "airbnbLongitude"
+          },
+          {
+            "parameterId": "airbnbLatitude"
+          },
+          {
+            "parameterId": "subwayEntryLongitude"
+          },
+          {
+            "parameterId": "subwayEntryLatitude"
+          }
+        ],
+        "outputs": [
+          {
+            "parameterId": "distanceToSubway",
+            "table": "airbnb",
+            "action": "AddColumn"
+          }
+        ]
+      }
+    },
+    {
+      "name": "calculateMap",
+      "type": "CalculatedColumn",
+      "settings": {
+        "name": "Example",
+        "table": "inputTable",
+        "expression": "$esc(${inputColumn})"
+      }
+    }
+  ]
+}
+
+
+

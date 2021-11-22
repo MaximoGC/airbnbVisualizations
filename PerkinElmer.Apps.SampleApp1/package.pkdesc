@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<PackageDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" SchemaVersion="1.0"
+    Name="PerkinElmer.Apps.SampleApp1" Version="1.0.0.0" SeriesId="{a9803d6d-2d87-4669-af43-1ae3d9cddfb5}" IntendedClient="any">
+  <File SourceFile="PerkinElmer.Apps.SampleApp1.dll" TargetFilename="PerkinElmer.Apps.SampleApp1.dll" Type="Assembly">
+    <Compatibility Min-version="0.0.0.0" Max-version="#.#.*.*" />
+  </File>
+</PackageDescription>

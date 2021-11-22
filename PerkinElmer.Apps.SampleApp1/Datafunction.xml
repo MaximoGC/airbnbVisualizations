@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ScriptFunctionDefinition
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Version Major="1" Minor="0" />
+	<Name>DataFunction</Name>
+	<Script>BMIColumn &lt;- weight / (height/100)^2 </Script>
+	<Input>
+		<Name>weight</Name>
+		<Type>Column</Type>
+	</Input>
+	<Input>
+		<Name>height</Name>
+		<Type>Column</Type>
+	</Input>
+	<Output>
+		<Name>BMIColumn</Name>
+		<Type>Column</Type>
+		<Description />
+	</Output>
+	<Description></Description>
+</ScriptFunctionDefinition>

@@ -1,0 +1,173 @@
+{
+  "name": "PerkinElmer.Apps.SampleApp1",
+  "description": "Sample app created from template",
+  "group": "Core",
+  "enabledIcon": "images/image-app.svg",
+  "disabledIcon": "images/image-app.svg",
+  "image": "previews/default.png",
+  "pageName": "PerkinElmer.Apps.SampleApp1",
+  "parameters": [
+    {
+      "name": "Airbnb",
+      "id": "airbnb",
+      "type": "table"
+    },
+    {
+      "name": "Subway entries",
+      "id": "subwayEntries",
+      "type": "table"
+    },
+    {
+      "name": "Airbnb Latitude",
+      "id": "airbnbLatitude",
+      "type": "column",
+      "parentSettings": {
+        "id": "airbnb"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Real\" or \"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Integer\"",
+          "description": "Only columns of Real or Integer type"
+        }
+      ]
+    },
+    {
+      "name": "Airbnb Longitude",
+      "id": "airbnbLongitude",
+      "type": "column",
+      "parentSettings": {
+        "id": "airbnb"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Real\" or \"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Integer\"",
+          "description": "Only columns of Real or Integer type"
+        }
+      ]
+    },
+    {
+      "name": "Airbnb Neighbourhood Group",
+      "id": "airbnbNeighbourhoodGroup",
+      "type": "column",
+      "parentSettings": {
+        "id": "airbnb"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"String\"",
+          "description": "Only columns of String type"
+        }
+      ]
+    },
+    {
+      "name": "Airbnb Neighbourhood",
+      "id": "airbnbNeighbourhood",
+      "type": "column",
+      "parentSettings": {
+        "id": "airbnb"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"String\"",
+          "description": "Only columns of String type"
+        }
+      ]
+    },
+    {
+      "name": "Airbnb room type",
+      "id": "airbnbRoomType",
+      "type": "column",
+      "parentSettings": {
+        "id": "airbnb"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"String\"",
+          "description": "Only columns of String type"
+        }
+      ]
+    },
+    {
+      "name": "Airbnb Main parameter",
+      "id": "airbnbMain",
+      "type": "column",
+      "parentSettings": {
+        "id": "airbnb"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Real\" or \"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Integer\"",
+          "description": "Only columns of Real or Integer type"
+        }
+      ]
+    },
+    {
+      "name": "Airbnb Main parameter",
+      "id": "airbnbMain",
+      "type": "column",
+      "parentSettings": {
+        "id": "airbnb"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Real\" or \"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Integer\"",
+          "description": "Only columns of Real or Integer type"
+        }
+      ]
+    },
+    {
+      "name": "Subway Entry Latitude",
+      "id": "subwayEntryLatitude",
+      "type": "column",
+      "parentSettings": {
+        "id": "subwayEntries"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Real\" or \"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Integer\"",
+          "description": "Only columns of Real or Integer type"
+        }
+      ]
+    },
+    {
+      "name": "Subway Entry Longitude",
+      "id": "subwayEntryLongitude",
+      "type": "column",
+      "parentSettings": {
+        "id": "subwayEntries"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Real\" or \"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"Integer\"",
+          "description": "Only columns of Real or Integer type"
+        }
+      ]
+    },
+    {
+      "name": "Subway Entry line",
+      "id": "subwayEntryLine",
+      "type": "column",
+      "parentSettings": {
+        "id": "subwayEntries"
+      },
+      "dataValidation": [
+        {
+          "expression": "\"${__TABLE}.{__COLUMN}.{DataType}\" ~= \"String\"",
+          "description": "Only columns of String type"
+        }
+      ]
+    },
+    {
+      "name": "Max distance to subway",
+      "id": "maxDistance",
+      "type": "value ",
+      "datatype": "float"
+    }
+  ],
+  "markings": [
+    {
+      "name": "airbnbMarking",
+      "color": "Aquamarine"
+    }
+  ]
+}
