@@ -238,19 +238,11 @@
       "components": [
         {
           "component": "ColumnSelector",
-          "scope": "airbnbMain",
-          "params": {
-            "validation": {
-              "onEvents": [ "airbnbMain.onBlur" ],
-              "validations": [
-                {
-                  "type": "error",
-                  "description": "Required",
-                  "validator": "validator.required"
-                }
-              ]
-            }
-          }
+          "scope": "airbnbMain"
+        },
+        {
+          "component": "FilterToggle",
+          "scope": "filterToggle"
         }
       ]
     },
