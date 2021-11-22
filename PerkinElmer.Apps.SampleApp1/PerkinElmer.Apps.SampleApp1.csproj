@@ -103,6 +103,8 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <EmbeddedResource Include="DistanceTo.sfd" />
+    <None Include="dataSetExamples\airbnb.csv" />
+    <None Include="dataSetExamples\subway_entrances.csv" />
     <None Include="package.pkdesc" />
     <None Include="packages.config" />
     <!-- React app for components -->
