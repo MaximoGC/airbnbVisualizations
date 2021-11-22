@@ -86,6 +86,8 @@ namespace PerkinElmer.Apps.SampleApp1
             barChart.BarWidth = 80;
             barChart.SortedBars = true;
             barChart.Orientation = BarChartOrientation.Horizontal;
+            barChart.Data.LimitingMarkingsEmptyBehavior = LimitingMarkingsEmptyBehavior.ShowAll;
+            barChart.Data.Filterings.Add(GetMarking("airbnbMarking"));
 
             return barChart.Visual;
         }
